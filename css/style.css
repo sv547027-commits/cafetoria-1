@@ -1,0 +1,526 @@
+body{
+    overflow-x: hidden;
+    background: #F8F4EF;
+}
+header .container-fluid { 
+    /*background: linear-gradient(90deg, #1A120B 0%,#2B1D13 35%,#4E342E 50%,#2B1D13 65%,#1A120B 100%);*/
+    
+    background: #F8F4EF;
+    backdrop-filter: blur(12px);
+    padding:12px 60px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    opacity: .9;
+    z-index: 500;
+}
+
+.image img{
+    height:120px;
+    width:120px;
+}
+
+.nav-item {
+    padding-top: 30px;
+    padding-left: 0px;
+}
+
+.nav-link {
+    color: #212529;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.buy{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    padding-top:35px;
+}
+
+.buy a {
+    color: white;
+    text-decoration: none;
+    padding:10px 18px;
+    display:inline-block;
+    background: #212529;
+    border-radius: 15px;
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  
+}
+#carouselExampleIndicators{
+    width: 100%;
+    height: 100vh;   /* Hero section ki height */
+}
+
+#carouselExampleIndicators .carousel-inner,
+#carouselExampleIndicators .carousel-item{
+    height: 100%;
+}
+
+#carouselExampleIndicators .carousel-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* Image crop hogi, stretch nahi */
+    object-position: center;
+}
+.heading{
+    text-align: center;
+}
+
+.heading h2{
+    color: #212529;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.line{
+    width: 500px;
+    height: 2px;
+    margin: 0 auto 30px;
+    background: linear-gradient(to right, transparent, #C8A97E, transparent);
+}
+
+.heading p{
+    max-width: 900px;
+    margin: auto;
+    color: #212529;
+
+    font-family: "Charm", cursive;
+    font-size: 20px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+.heading b{
+    color: #212529;
+    padding: 10px 50px;
+
+}
+.line2{
+    width: 100%;
+    height: 2px;
+    margin: 0 auto 30px;
+    background: linear-gradient(to right, transparent, #C8A97E, transparent);
+}
+.text h3{
+    font-size: 30px;
+    text-align: center;
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.bg-danger{  
+    background: #212529 !important;
+    box-shadow:  2px 3px 10px black;
+}
+.bg-danger img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+.bg-danger a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #212529;
+    padding: 5px 25px;
+    background: #c8c87ce6;
+    border-radius: 12px;
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.bg-danger h3{
+    color: white;
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 25px;
+}
+.bg-danger p{
+    color: white; 
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.bg-danger a:hover{
+    background: white;
+    color: black;
+}
+.box{
+    border: solid 1px black;
+    height: 200px;
+    width: auto;
+
+}
+.bg-white{
+    background: #212529 !important;
+    box-shadow: 2px 3px 10px black;
+}
+.bg-white img{
+    height: 80px;
+    width: 80px;
+}
+.bg-white h3{
+    color: white; 
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 10px;
+}
+.bg-white p{
+    color: white; 
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.bg-white a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #212529;
+    padding: 5px 25px;
+    background: #c8c87ce6;
+    border-radius: 12px;
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.bg-white a:hover{
+    background: white;
+    color: black;
+}
+.col-sm-6 h4{
+    color: #212529;
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.col-sm-6 p{
+        color: #212529;
+
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.col-sm-6{
+    
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.banner{
+    width: 100%;
+    min-height: 80vh;
+    background-image: url('../19.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.text2 h2{
+    color: white;
+  text-align: center;
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
+}
+.text2 p{
+    color: white;
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+}
+.bg-success{
+    background: black !important;
+    box-shadow: 3px 3px 4px black;
+}
+.bg-success img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: solid 1px goldenrod;
+}
+.bg-success h3{
+    font-size: 18px;   
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: white;
+}
+.bg-success p{
+    color: white;
+    
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 12px;
+
+}
+.review{
+    background: #212529;
+}
+.image5 img{
+    height: 100px;
+    width: 120px;
+    border-radius: 50%;
+    border: solid 1px white;
+}
+.star img{
+    width: 60%;
+    height: 90px;
+}
+.review h4{
+    color: white;
+    font-size: 12px;
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  padding: 0 30px;
+}
+.review h6{
+    color: white;
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-top: 20px;
+}
+.text p{
+    text-align: center;
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.foryou{
+    background:#212529;
+    padding:25px;
+    border-radius:15px;
+    height:100%;
+}
+.moments img{
+    height: 100%;
+    width: 100%;
+}
+.visit{
+background:#F8F4EF;
+}
+.visit h2{
+font-size:55px;
+font-family:"Lobster Two",sans-serif;
+color:#212529;
+}
+.visit-card{
+background:#212529;
+border-radius:20px;
+padding:30px;
+height:100%;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+transition:.4s;
+}
+.visit-card:hover{
+transform:translateY(-10px);
+}
+.visit-card h3{
+color:#C8A97E;
+text-align:center;
+margin-bottom:20px;
+font-family:"Lobster Two",sans-serif;
+}
+.visit-card iframe{
+width:100%;
+height:320px;
+border:none;
+border-radius:15px;
+margin-bottom:25px;
+}
+.contact-item{
+display:flex;
+align-items:center;
+gap:18px;
+margin-bottom:22px;
+}
+.contact-item i{
+width:50px;
+height:50px;
+background:#C8A97E;
+color:#212529;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+font-size:20px;
+}
+.contact-item h5{
+color:#C8A97E;
+margin:0;
+font-size:18px;
+}
+.contact-item p{
+color:white;
+margin:0;
+line-height:25px;
+}
+.time p{
+display:flex;
+justify-content:space-between;
+color:white;
+padding:12px 0;
+border-bottom:1px solid rgba(255,255,255,.15);
+}
+.time span{
+color:#C8A97E;
+}
+.visit-btn{
+display:block;
+text-align:center;
+background:#C8A97E;
+color:#212529;
+padding:12px;
+margin-top:25px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+.visit-btn:hover{
+background:white;
+color:#212529;
+}
+.footer{
+background:#212529;
+padding:70px 0 30px;
+margin-top:80px;
+}
+.footer h2{
+color:#C8A97E;
+font-family:"Lobster Two",sans-serif;
+font-size:45px;
+}
+.footer h5{
+color:white;
+margin-bottom:20px;
+font-family:"Charm",cursive;
+}
+.footer h4{
+color:#C8A97E;
+margin-bottom:20px;
+font-family:"Lobster Two",sans-serif;
+}
+.footer p{
+color:#d6d6d6;
+line-height:30px;
+}
+.footer ul{
+padding:0;
+list-style:none;
+}
+.footer ul li{
+margin-bottom:12px;
+}
+.footer ul li a{
+color:#d6d6d6;
+text-decoration:none;
+transition:.3s;
+}
+.footer ul li a:hover{
+color:#C8A97E;
+padding-left:8px;
+}
+.social{
+display:flex;
+gap:15px;
+}
+.social a{
+width:45px;
+height:45px;
+background:#C8A97E;
+color:#212529;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+font-size:18px;
+transition:.3s;
+text-decoration:none;
+}
+.social a:hover{
+background:white;
+transform:translateY(-5px);
+}
+.footer input{
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+margin-bottom:12px;
+outline:none;
+}
+.footer button{
+width:100%;
+padding:12px;
+background:#C8A97E;
+color:#212529;
+border:none;
+border-radius:8px;
+font-weight:bold;
+transition:.3s;
+}
+.footer button:hover{
+background:white;
+}
+.footer hr{
+border-color:#555;
+margin:40px 0 20px;
+}
+.copyright{
+text-align:center;
+color:#bbb;
+}
+@media (max-width:768px){
+
+header .container-fluid{
+    padding:10px 15px;
+}
+
+.image{
+    text-align:center;
+}
+
+.image img{
+    width:90px;
+    height:90px;
+    display:block;
+    margin:0 auto;
+}
+
+.buy{
+    padding:15px 0;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.buy a{
+    padding:8px 18px;
+    font-size:14px;
+}
+
+.nav-item{
+    padding-top:10px;
+    text-align:center;
+}
+
+.navbar-nav{
+    margin-top:15px;
+}
+
+}
