@@ -3,8 +3,6 @@ body{
     background: #F8F4EF;
 }
 header .container-fluid { 
-    /*background: linear-gradient(90deg, #1A120B 0%,#2B1D13 35%,#4E342E 50%,#2B1D13 65%,#1A120B 100%);*/
-    
     background: #F8F4EF;
     backdrop-filter: blur(12px);
     padding:12px 60px;
@@ -56,7 +54,7 @@ header .container-fluid {
 }
 #carouselExampleIndicators{
     width: 100%;
-    height: 100vh;   /* Hero section ki height */
+    height: 100vh;
 }
 
 #carouselExampleIndicators .carousel-inner,
@@ -67,7 +65,7 @@ header .container-fluid {
 #carouselExampleIndicators .carousel-item img{
     width: 100%;
     height: 100%;
-    object-fit: cover;      /* Image crop hogi, stretch nahi */
+    object-fit: cover;
     object-position: center;
 }
 .heading{
@@ -93,11 +91,9 @@ header .container-fluid {
     max-width: 900px;
     margin: auto;
     color: #212529;
-
     font-family: "Charm", cursive;
     font-size: 20px;
     font-weight: 700;
-
     letter-spacing: 1px;
     word-spacing: 3px;
 }
@@ -122,6 +118,11 @@ header .container-fluid {
 .bg-danger{  
     background: #212529 !important;
     box-shadow:  2px 3px 10px black;
+    transition: 0.4s;
+}
+
+.bg-danger:hover{
+    transform: translateY(-10px);
 }
 .bg-danger img{
     height: 300px;
@@ -165,6 +166,10 @@ header .container-fluid {
 .bg-white{
     background: #212529 !important;
     box-shadow: 2px 3px 10px black;
+    transition: 0.4s;
+}
+.bg-white:hover{
+    transform: translateY(-10px);
 }
 .bg-white img{
     height: 80px;
@@ -200,22 +205,21 @@ header .container-fluid {
 }
 .col-sm-6 h4{
     color: #212529;
-  font-family: "Lobster Two", sans-serif;
-  font-weight: 700;
-  font-style: italic;
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 700;
+    font-style: italic;
 }
 .col-sm-6 p{
-        color: #212529;
-
-  font-family: "Lobster Two", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+    color: #212529;
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 .col-sm-6{
     
-  font-family: "Lobster Two", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 .banner{
     width: 100%;
@@ -243,6 +247,10 @@ header .container-fluid {
 .bg-success{
     background: black !important;
     box-shadow: 3px 3px 4px black;
+    transition: 0.4s;
+}
+.bg-success:hover{
+transform:translateY(-10px);
 }
 .bg-success img{
     height: 80px;
@@ -268,6 +276,12 @@ header .container-fluid {
 }
 .review{
     background: #212529;
+}
+.review{
+    transition: 0.4s;
+}
+.review:hover{
+transform:translateY(-10px);
 }
 .image5 img{
     height: 100px;
@@ -305,6 +319,12 @@ header .container-fluid {
     padding:25px;
     border-radius:15px;
     height:100%;
+}
+.moments{
+    transition: 0.4s;
+}
+.moments:hover{
+transform:translateY(-10px);
 }
 .moments img{
     height: 100%;
@@ -433,7 +453,7 @@ transition:.3s;
 }
 .footer ul li a:hover{
 color:#C8A97E;
-padding-left:8px;
+padding-left:18px;
 }
 .social{
 display:flex;
@@ -486,6 +506,9 @@ text-align:center;
 color:#bbb;
 }
 @media (max-width:768px){
+    .line .line2{
+        width: 100%;
+    }
 
 header .container-fluid{
     padding:10px 15px;
