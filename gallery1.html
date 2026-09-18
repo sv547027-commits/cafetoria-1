@@ -1,0 +1,1170 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cafetoria | Gallery</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+
+        /* ==============================
+           RESET
+        ============================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fffaf4;
+            color: #2c211b;
+        }
+
+
+        /* ==============================
+           NAVBAR
+        ============================== */
+
+        .navbar {
+            width: 100%;
+            height: 75px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 8%;
+
+            background: #ffffff;
+
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #8b542e;
+        }
+
+        .logo i {
+            margin-right: 7px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4b3a30;
+            font-size: 15px;
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #b77945;
+        }
+
+
+        /* ==============================
+           HERO
+        ============================== */
+
+        .hero {
+            width: 100%;
+            min-height: 420px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    rgba(30, 20, 14, 0.55),
+                    rgba(30, 20, 14, 0.55)
+                ),
+                url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1800&q=85");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            color: white;
+            padding: 20px;
+        }
+
+        .hero-content span {
+            display: inline-block;
+
+            font-size: 13px;
+            letter-spacing: 4px;
+            font-weight: 700;
+
+            margin-bottom: 15px;
+        }
+
+        .hero-content h1 {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .hero-content p {
+            font-size: 17px;
+            max-width: 600px;
+            line-height: 1.7;
+            margin: auto;
+        }
+
+
+        /* ==============================
+           GALLERY SECTION
+        ============================== */
+
+        .gallery-section {
+            width: 100%;
+            padding: 90px 8%;
+            background: #fffaf4;
+        }
+
+
+        /* Header */
+
+        .gallery-header {
+            max-width: 700px;
+            margin: 0 auto 55px;
+
+            text-align: center;
+        }
+
+        .gallery-subtitle {
+            display: inline-block;
+
+            color: #b77945;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 12px;
+        }
+
+        .gallery-header h2 {
+            font-size: 45px;
+            color: #2c211b;
+            margin-bottom: 15px;
+        }
+
+        .gallery-header h2 span {
+            color: #b77945;
+        }
+
+        .gallery-header p {
+            color: #766c65;
+
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+
+        /* ==============================
+           GALLERY GRID
+        ============================== */
+
+        .gallery {
+            width: 100%;
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            grid-auto-rows: 230px;
+
+            gap: 18px;
+        }
+
+
+        /* Gallery Item */
+
+        .gallery-item {
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 18px;
+
+            cursor: pointer;
+
+            background: #ddd;
+        }
+
+
+        /* Large Images */
+
+        .gallery-item.large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+
+        /* Image */
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition:
+                transform 0.6s ease,
+                filter 0.4s ease;
+        }
+
+
+        /* Zoom */
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+
+        /* ==============================
+           IMAGE OVERLAY
+        ============================== */
+
+        .gallery-overlay {
+            position: absolute;
+
+            inset: 0;
+
+            display: flex;
+
+            align-items: flex-end;
+
+            justify-content: space-between;
+
+            padding: 22px;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(25, 17, 12, 0.85),
+                    rgba(25, 17, 12, 0.05)
+                );
+
+            opacity: 0;
+
+            transition: opacity 0.35s ease;
+        }
+
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+
+        /* Image Title */
+
+        .gallery-overlay h3 {
+            color: white;
+
+            font-size: 19px;
+
+            font-weight: 600;
+        }
+
+
+        /* Expand Button */
+
+        .gallery-overlay i {
+            width: 43px;
+            height: 43px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: white;
+
+            color: #8b542e;
+
+            font-size: 15px;
+
+            transition: 0.3s;
+        }
+
+        .gallery-overlay i:hover {
+            transform: rotate(45deg);
+        }
+
+
+        /* ==============================
+           LIGHTBOX
+        ============================== */
+
+        .lightbox {
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(15, 10, 7, 0.94);
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 30px;
+
+            z-index: 999;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition: 0.3s;
+        }
+
+
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+
+        .lightbox-content {
+            position: relative;
+
+            width: min(1000px, 90%);
+
+            max-height: 90vh;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .lightbox img {
+            max-width: 100%;
+            max-height: 85vh;
+
+            border-radius: 12px;
+
+            object-fit: contain;
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+
+        /* Close */
+
+        .close-btn {
+            position: fixed;
+
+            top: 25px;
+            right: 30px;
+
+            width: 45px;
+            height: 45px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: white;
+
+            color: #5b3923;
+
+            font-size: 20px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+            z-index: 1000;
+        }
+
+        .close-btn:hover {
+            transform: rotate(90deg);
+        }
+
+
+        /* Previous / Next */
+
+        .prev-btn,
+        .next-btn {
+            position: fixed;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            width: 50px;
+            height: 50px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: white;
+
+            color: #5b3923;
+
+            font-size: 20px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+            z-index: 1000;
+        }
+
+        .prev-btn {
+            left: 30px;
+        }
+
+        .next-btn {
+            right: 30px;
+        }
+
+        .prev-btn:hover,
+        .next-btn:hover {
+            transform: translateY(-50%) scale(1.1);
+        }
+
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+            background: #2c211b;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px 20px;
+        }
+
+        footer h3 {
+            font-size: 25px;
+
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            color: #d6c8bd;
+
+            font-size: 14px;
+        }
+
+
+        /* ==============================
+           TABLET
+        ============================== */
+
+        @media (max-width: 900px) {
+
+            .navbar {
+                padding: 0 5%;
+            }
+
+            .gallery-section {
+                padding: 70px 5%;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+
+                grid-auto-rows: 220px;
+            }
+
+            .gallery-item.large {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+
+            .hero-content h1 {
+                font-size: 48px;
+            }
+
+            .gallery-header h2 {
+                font-size: 38px;
+            }
+
+        }
+
+
+        /* ==============================
+           MOBILE
+        ============================== */
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                height: 65px;
+
+                padding: 0 20px;
+            }
+
+            .logo {
+                font-size: 23px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+
+            /* Hero */
+
+            .hero {
+                min-height: 350px;
+            }
+
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .hero-content p {
+                font-size: 14px;
+            }
+
+
+            /* Gallery */
+
+            .gallery-section {
+                padding: 60px 20px;
+            }
+
+            .gallery-header {
+                margin-bottom: 35px;
+            }
+
+            .gallery-header h2 {
+                font-size: 32px;
+            }
+
+            .gallery-header p {
+                font-size: 14px;
+            }
+
+
+            .gallery {
+                grid-template-columns: 1fr;
+
+                grid-auto-rows: 250px;
+
+                gap: 14px;
+            }
+
+
+            .gallery-item.large {
+                grid-column: span 1;
+
+                grid-row: span 1;
+            }
+
+
+            /* Show overlay on mobile */
+
+            .gallery-overlay {
+                opacity: 1;
+            }
+
+
+            /* Lightbox */
+
+            .lightbox {
+                padding: 15px;
+            }
+
+            .lightbox-content {
+                width: 100%;
+            }
+
+            .prev-btn {
+                left: 12px;
+            }
+
+            .next-btn {
+                right: 12px;
+            }
+
+            .prev-btn,
+            .next-btn {
+                width: 42px;
+                height: 42px;
+
+                font-size: 16px;
+            }
+
+            .close-btn {
+                top: 15px;
+                right: 15px;
+
+                width: 40px;
+                height: 40px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ==============================
+         NAVBAR
+    ============================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-mug-hot"></i>
+            Cafetoria
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#">Home</a>
+            </li>
+
+            <li>
+                <a href="#gallery">Gallery</a>
+            </li>
+
+            <li>
+                <a href="#">Menu</a>
+            </li>
+
+            <li>
+                <a href="#">About</a>
+            </li>
+
+            <li>
+                <a href="#">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- ==============================
+         HERO
+    ============================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span>WELCOME TO CAFETORIA</span>
+
+            <h1>Our Gallery</h1>
+
+            <p>
+                Discover the taste, atmosphere and beautiful
+                moments that make Cafetoria special.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         GALLERY
+    ============================== -->
+
+    <section class="gallery-section" id="gallery">
+
+
+        <!-- Header -->
+
+        <div class="gallery-header">
+
+            <span class="gallery-subtitle">
+                OUR MOMENTS
+            </span>
+
+            <h2>
+                Explore <span>Cafetoria</span>
+            </h2>
+
+            <p>
+                Take a look at our delicious food, beautiful
+                interiors and cozy café moments.
+            </p>
+
+        </div>
+
+
+
+        <!-- Gallery -->
+
+        <div class="gallery">
+
+
+            <!-- Image 1 -->
+
+            <div class="gallery-item large">
+
+                <img
+                    src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=85"
+                    alt="Coffee">
+
+                <div class="gallery-overlay">
+
+                    <h3>Fresh Coffee</h3>
+
+                    <i class="fa-solid fa-expand"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Image 2 -->
+
+            <div class="gallery-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=900&q=85"
+                    alt="Cafe Interior">
+
+                <div class="gallery-overlay">
+
+                    <h3>Cozy Corner</h3>
+
+                    <i class="fa-solid fa-expand"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Image 3 -->
+
+            <div class="gallery-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=85"
+                    alt="Coffee Cup">
+
+                <div class="gallery-overlay">
+
+                    <h3>Perfect Brew</h3>
+
+                    <i class="fa-solid fa-expand"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Image 4 -->
+
+            <div class="gallery-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=85"
+                    alt="Burger">
+
+                <div class="gallery-overlay">
+
+                    <h3>Delicious Burger</h3>
+
+                    <i class="fa-solid fa-expand"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Image 5 -->
+
+            <div class="gallery-item large">
+
+                <img
+                    src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=1200&q=85"
+                    alt="Pizza">
+
+                <div class="gallery-overlay">
+
+                    <h3>Freshly Baked Pizza</h3>
+
+                    <i class="fa-solid fa-expand"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Image 6 -->
+
+            <div class="gallery-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85"
+                    alt="Dessert">
+
+                <div class="gallery-overlay">
+
+                    <h3>Sweet Dessert</h3>
+
+                    <i class="fa-solid fa-expand"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Image 7 -->
+
+            <div class="gallery-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85"
+                    alt="Restaurant">
+
+                <div class="gallery-overlay">
+
+                    <h3>Beautiful Interior</h3>
+
+                    <i class="fa-solid fa-expand"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Image 8 -->
+
+            <div class="gallery-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1481833761820-0509d3217039?auto=format&fit=crop&w=900&q=85"
+                    alt="Cafe">
+
+                <div class="gallery-overlay">
+
+                    <h3>Cafetoria Moments</h3>
+
+                    <i class="fa-solid fa-expand"></i>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         LIGHTBOX
+    ============================== -->
+
+    <div class="lightbox" id="lightbox">
+
+
+        <!-- Close -->
+
+        <button class="close-btn" id="closeBtn">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <!-- Previous -->
+
+        <button class="prev-btn" id="prevBtn">
+
+            <i class="fa-solid fa-chevron-left"></i>
+
+        </button>
+
+
+        <!-- Image -->
+
+        <div class="lightbox-content">
+
+            <img
+                id="lightboxImage"
+                src=""
+                alt="Gallery Image">
+
+        </div>
+
+
+        <!-- Next -->
+
+        <button class="next-btn" id="nextBtn">
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+
+    <footer>
+
+        <h3>
+            <i class="fa-solid fa-mug-hot"></i>
+            Cafetoria
+        </h3>
+
+        <p>
+            Good food. Great coffee. Beautiful moments.
+        </p>
+
+    </footer>
+
+
+
+    <!-- ==============================
+         JAVASCRIPT
+    ============================== -->
+
+    <script>
+
+        /* Get Elements */
+
+        const galleryItems =
+            document.querySelectorAll(".gallery-item");
+
+        const lightbox =
+            document.getElementById("lightbox");
+
+        const lightboxImage =
+            document.getElementById("lightboxImage");
+
+        const closeBtn =
+            document.getElementById("closeBtn");
+
+        const prevBtn =
+            document.getElementById("prevBtn");
+
+        const nextBtn =
+            document.getElementById("nextBtn");
+
+
+        /* Store Images */
+
+        const images = [];
+
+        galleryItems.forEach((item, index) => {
+
+            const image =
+                item.querySelector("img");
+
+            images.push(image.src);
+
+
+            /* Click Event */
+
+            item.addEventListener("click", () => {
+
+                currentIndex = index;
+
+                showImage();
+
+                lightbox.classList.add("active");
+
+                document.body.style.overflow = "hidden";
+
+            });
+
+        });
+
+
+        /* Current Image */
+
+        let currentIndex = 0;
+
+
+        /* Show Image */
+
+        function showImage() {
+
+            lightboxImage.src =
+                images[currentIndex];
+
+        }
+
+
+        /* Close Lightbox */
+
+        function closeLightbox() {
+
+            lightbox.classList.remove("active");
+
+            document.body.style.overflow = "auto";
+
+        }
+
+
+        closeBtn.addEventListener(
+            "click",
+            closeLightbox
+        );
+
+
+        /* Next Image */
+
+        nextBtn.addEventListener("click", () => {
+
+            currentIndex++;
+
+            if (currentIndex >= images.length) {
+
+                currentIndex = 0;
+
+            }
+
+            showImage();
+
+        });
+
+
+        /* Previous Image */
+
+        prevBtn.addEventListener("click", () => {
+
+            currentIndex--;
+
+            if (currentIndex < 0) {
+
+                currentIndex = images.length - 1;
+
+            }
+
+            showImage();
+
+        });
+
+
+        /* Click Outside */
+
+        lightbox.addEventListener("click", (e) => {
+
+            if (e.target === lightbox) {
+
+                closeLightbox();
+
+            }
+
+        });
+
+
+        /* Keyboard Controls */
+
+        document.addEventListener("keydown", (e) => {
+
+            if (!lightbox.classList.contains("active")) {
+                return;
+            }
+
+
+            if (e.key === "Escape") {
+
+                closeLightbox();
+
+            }
+
+
+            if (e.key === "ArrowRight") {
+
+                currentIndex++;
+
+                if (currentIndex >= images.length) {
+
+                    currentIndex = 0;
+
+                }
+
+                showImage();
+
+            }
+
+
+            if (e.key === "ArrowLeft") {
+
+                currentIndex--;
+
+                if (currentIndex < 0) {
+
+                    currentIndex = images.length - 1;
+
+                }
+
+                showImage();
+
+            }
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
+```
