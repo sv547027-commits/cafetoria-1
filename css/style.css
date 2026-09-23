@@ -322,6 +322,7 @@ transform:translateY(-10px);
 }
 .moments{
     transition: 0.4s;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0),inset 4px 4px 15px 0px #000000,5px 5px 5px 0px #000000;
 }
 .moments:hover{
 transform:translateY(-10px);
@@ -555,4 +556,15 @@ header .container-fluid{
     margin-top:15px;
 }
 
+}
+.menuhero {
+        width: 100%;
+        height: auto;
+}
+
+.menuhero img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
 }
