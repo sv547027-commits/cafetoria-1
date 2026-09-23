@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,15 +8,11 @@
 
     <title>Cafetoria | Gallery</title>
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <style>
 
-        /* ==============================
-           RESET
-        ============================== */
 
         * {
             margin: 0;
@@ -33,11 +29,6 @@
             background: #fffaf4;
             color: #2c211b;
         }
-
-
-        /* ==============================
-           NAVBAR
-        ============================== */
 
         .navbar {
             width: 100%;
@@ -87,11 +78,6 @@
             color: #b77945;
         }
 
-
-        /* ==============================
-           HERO
-        ============================== */
-
         .hero {
             width: 100%;
             min-height: 420px;
@@ -140,19 +126,11 @@
             margin: auto;
         }
 
-
-        /* ==============================
-           GALLERY SECTION
-        ============================== */
-
         .gallery-section {
             width: 100%;
             padding: 90px 8%;
             background: #fffaf4;
         }
-
-
-        /* Header */
 
         .gallery-header {
             max-width: 700px;
@@ -191,11 +169,6 @@
             line-height: 1.7;
         }
 
-
-        /* ==============================
-           GALLERY GRID
-        ============================== */
-
         .gallery {
             width: 100%;
 
@@ -207,9 +180,6 @@
 
             gap: 18px;
         }
-
-
-        /* Gallery Item */
 
         .gallery-item {
             position: relative;
@@ -223,16 +193,10 @@
             background: #ddd;
         }
 
-
-        /* Large Images */
-
         .gallery-item.large {
             grid-column: span 2;
             grid-row: span 2;
         }
-
-
-        /* Image */
 
         .gallery-item img {
             width: 100%;
@@ -247,17 +211,9 @@
                 filter 0.4s ease;
         }
 
-
-        /* Zoom */
-
         .gallery-item:hover img {
             transform: scale(1.08);
         }
-
-
-        /* ==============================
-           IMAGE OVERLAY
-        ============================== */
 
         .gallery-overlay {
             position: absolute;
@@ -290,8 +246,6 @@
         }
 
 
-        /* Image Title */
-
         .gallery-overlay h3 {
             color: white;
 
@@ -299,9 +253,6 @@
 
             font-weight: 600;
         }
-
-
-        /* Expand Button */
 
         .gallery-overlay i {
             width: 43px;
@@ -327,10 +278,6 @@
             transform: rotate(45deg);
         }
 
-
-        /* ==============================
-           LIGHTBOX
-        ============================== */
 
         .lightbox {
             position: fixed;
@@ -387,9 +334,6 @@
             box-shadow:
                 0 20px 60px rgba(0, 0, 0, 0.5);
         }
-
-
-        /* Close */
 
         .close-btn {
             position: fixed;
@@ -466,10 +410,6 @@
         }
 
 
-        /* ==============================
-           FOOTER
-        ============================== */
-
         footer {
             background: #2c211b;
 
@@ -491,11 +431,6 @@
 
             font-size: 14px;
         }
-
-
-        /* ==============================
-           TABLET
-        ============================== */
 
         @media (max-width: 900px) {
 
@@ -528,11 +463,6 @@
 
         }
 
-
-        /* ==============================
-           MOBILE
-        ============================== */
-
         @media (max-width: 600px) {
 
             .navbar {
@@ -549,9 +479,6 @@
                 display: none;
             }
 
-
-            /* Hero */
-
             .hero {
                 min-height: 350px;
             }
@@ -564,8 +491,6 @@
                 font-size: 14px;
             }
 
-
-            /* Gallery */
 
             .gallery-section {
                 padding: 60px 20px;
@@ -600,14 +525,9 @@
             }
 
 
-            /* Show overlay on mobile */
-
             .gallery-overlay {
                 opacity: 1;
             }
-
-
-            /* Lightbox */
 
             .lightbox {
                 padding: 15px;
@@ -650,10 +570,6 @@
 <body>
 
 
-    <!-- ==============================
-         NAVBAR
-    ============================== -->
-
     <nav class="navbar">
 
         <div class="logo">
@@ -687,12 +603,6 @@
 
     </nav>
 
-
-
-    <!-- ==============================
-         HERO
-    ============================== -->
-
     <section class="hero">
 
         <div class="hero-content">
@@ -710,16 +620,8 @@
 
     </section>
 
-
-
-    <!-- ==============================
-         GALLERY
-    ============================== -->
-
     <section class="gallery-section" id="gallery">
 
-
-        <!-- Header -->
 
         <div class="gallery-header">
 
@@ -739,13 +641,8 @@
         </div>
 
 
-
-        <!-- Gallery -->
-
         <div class="gallery">
 
-
-            <!-- Image 1 -->
 
             <div class="gallery-item large">
 
@@ -762,10 +659,6 @@
                 </div>
 
             </div>
-
-
-
-            <!-- Image 2 -->
 
             <div class="gallery-item">
 
@@ -784,9 +677,6 @@
             </div>
 
 
-
-            <!-- Image 3 -->
-
             <div class="gallery-item">
 
                 <img
@@ -802,10 +692,6 @@
                 </div>
 
             </div>
-
-
-
-            <!-- Image 4 -->
 
             <div class="gallery-item">
 
@@ -823,10 +709,6 @@
 
             </div>
 
-
-
-            <!-- Image 5 -->
-
             <div class="gallery-item large">
 
                 <img
@@ -843,10 +725,6 @@
 
             </div>
 
-
-
-            <!-- Image 6 -->
-
             <div class="gallery-item">
 
                 <img
@@ -862,10 +740,6 @@
                 </div>
 
             </div>
-
-
-
-            <!-- Image 7 -->
 
             <div class="gallery-item">
 
